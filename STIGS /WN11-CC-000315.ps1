@@ -1,4 +1,3 @@
-@'
 <#
 .SYNOPSIS
     This PowerShell script ensures that the Windows Installer "Always install with elevated privileges" feature is disabled.
@@ -37,6 +36,3 @@ if (-not (Test-Path $path)) {
 Set-ItemProperty -Path $path -Name $name -Value $value -Type DWord
 
 Write-Host "WN11-CC-000315 remediation applied. $name set to $value."
-'@ | Out-File "$env:USERPROFILE\OneDrive\Documents\STIG-Internship\WN11-CC-000315.ps1" -Encoding UTF8
-
-Write-Host "WN11-CC-000315.ps1 saved"
